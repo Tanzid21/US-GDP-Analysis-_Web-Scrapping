@@ -13,7 +13,7 @@ Clean and format the extracted data using Pandas. Organize the data into a DataF
 # Data Source: 
 https://www.worldometers.info/gdp/us-gdp/
 
-# Result: 
+# Data Analysis Result: 
 
 # US GDP Trend Over Time (1993-2022)
 ![image](https://github.com/user-attachments/assets/3e5b47a3-73cd-46b8-aa38-6e7a293f6861)
