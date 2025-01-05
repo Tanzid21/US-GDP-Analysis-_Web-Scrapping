@@ -1,19 +1,27 @@
 # US-GDP-Analysis-Web-Scrapping
 Used web scraping to extract US GDP data, growth rates, GDP per capita, and population trends from Worldometers. The scraped data was cleaned using Pandas and analyzed to uncover key economic trends. Visualizations created with Matplotlib showcase growth patterns, recessions, and the impact of population changes from 1993 to 2022.
 
-# Objective
-The primary goal of this project is to automate the extraction, processing, and analysis of United States GDP data from the Worldometers website. The project will involve web scraping techniques to retrieve tabular data from HTML pages, structuring it into a readable format using Python, and conducting basic data analysis using Pandas.
+# Context:
 
-# Web Scraping
-Use Python libraries (requests and BeautifulSoup) to retrieve the HTML content of the webpage. Locate the desired data table by analyzing the webpage structure and identifying unique class names or IDs. Extract both column headers and rows of data from the table.
+The overarching objective of this project is to create a fully automated pipeline for extracting, processing, and analyzing United States GDP data sourced from the Worldometers website. This initiative involves leveraging web scraping techniques to dynamically retrieve tabular GDP data embedded within HTML pages and transforming it into a structured, machine-readable format using Python.
+The project will utilize libraries like BeautifulSoup or Selenium for efficient web scraping and HTML parsing. Once extracted, the data will be cleaned, formatted, and organized into a tabular structure using the Pandas library, enabling seamless data manipulation. The structured data will then be subjected to basic exploratory data analysis (EDA) to identify trends, insights, and patterns in GDP growth over time.In addition to data processing, the project aims to incorporate visualizations using tools such as Matplotlib and Seaborn, providing graphical representations of GDP trends and contributions. The ultimate goal is to streamline the data extraction-to-analysis workflow, reducing manual intervention and ensuring accuracy, efficiency, and repeatability in GDP data processing. This pipeline can serve as a foundation for more advanced analytics or integration into larger economic research initiatives.
+
+# Web Scraping:
+
+Web scraping will involve the use of Python libraries such as requests and BeautifulSoup to programmatically access and extract relevant content from the Worldometers website. The requests library will be used to send HTTP GET requests to the target webpage and retrieve the raw HTML content of the page. After retrieving the HTML, the BeautifulSoup library will parse the content, enabling easy navigation and searching of the document tree to locate the specific data table containing GDP information. By analyzing the webpage structure (via browser developer tools or inspecting the source code), unique identifiers such as class names, IDs, or tag hierarchies will be identified to precisely locate the table of interest. Once the table is located, the script will extract both the column headers (e.g., year, GDP value, percentage change, etc.) and the rows of data using HTML tags like <table>, <tr>, and <td>. This process ensures the desired data is isolated and prepared for further processing.
 
 # Data Cleaning and Structuring:
-Clean and format the extracted data using Pandas. Organize the data into a DataFrame with meaningful column names. Handle missing or improperly formatted data, if any.
+
+The raw data extracted from the webpage may contain irregularities such as missing values, unnecessary symbols (e.g., commas, dollar signs), or inconsistencies in formatting. To address this, the extracted data will be cleaned and structured using the Pandas library. First, the data will be converted into a Pandas DataFrame, where meaningful and intuitive column names (e.g., "Year", "GDP in Trillions", "Annual Growth Rate") will be assigned. Any redundant or irrelevant columns will be removed to streamline the dataset. Special characters or formatting issues, such as commas in numeric values or trailing spaces, will be stripped using string manipulation techniques or Pandas' built-in functions. Missing or null values will be handled appropriately, either by imputing them with relevant statistical measures (e.g., mean, median) or by removing the corresponding rows if they do not significantly impact the dataset. The result will be a clean, well-structured DataFrame, ready for exploratory analysis and visualization, ensuring the data is accurate, consistent, and suitable for deeper insights.
+
 
 # Data Source: 
 https://www.worldometers.info/gdp/us-gdp/
 
 # Data Analysis Result: 
+
+![image](https://github.com/user-attachments/assets/11a27fb5-2e7d-4aed-be9f-64bbaefe2394)
+The pie chart illustrates the percentage contribution of GDP from 2011 to 2022, showcasing economic fluctuations and resilience over time. The highest contribution occurred in 2011 (10.9%), signaling strong economic performance at the start of the period. However, from 2012 to 2014, there was a noticeable dip, with contributions ranging from 6.7% to 7.5%, likely reflecting the lingering effects of the 2008 financial crisis on global economies. Starting in 2015, the percentage steadily increased, indicating a phase of recovery and growth, reaching a consistent rise through 2018 (8.8%) and 2019 (9.1%). The year 2020 saw a decline to 9.0%, which can likely be attributed to the global economic disruption caused by the COVID-19 pandemic. However, the subsequent years, 2021 (9.9%) and 2022 (10.0%), show signs of recovery, reflecting efforts to stabilize economies through stimulus measures and the reopening of global markets. This chart provides a clear narrative of economic challenges and recoveries, emphasizing the resilience and adaptability of economies in response to both external shocks and internal growth strategies over the 12-year period.
 
 # US GDP Trend Over Time (1993-2022)
 ![image](https://github.com/user-attachments/assets/3e5b47a3-73cd-46b8-aa38-6e7a293f6861)
